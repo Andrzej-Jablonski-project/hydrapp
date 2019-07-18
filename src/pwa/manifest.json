@@ -5,10 +5,9 @@
   "background_color": "#000000",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/wtf-gulp-starter/",
-  "start_url": "/wtf-gulp-starter/",
-  "icons": [
-    {
+  "scope": "/hydrapp/",
+  "start_url": "/hydrapp/",
+  "icons": [{
       "src": "assets/pwa/icons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png"
