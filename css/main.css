@@ -346,8 +346,14 @@ body {
     height: 280px;
     margin-bottom: 48px; }
   .hydrapp__water {
-    display: none; }
+    display: none;
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
     .hydrapp__water--0 {
+      display: block;
       fill: #eceff1;
       -webkit-clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
               clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
