@@ -20,6 +20,7 @@ const addButton = document.querySelector('.hydrapp__button--add-js');
 const removeButton = document.querySelector('.hydrapp__button--remove-js');
 const info = document.querySelector('.hydrapp__cunter--js');
 const table = document.querySelector('.history-table__data--js');
+const water = document.querySelector('.hydrapp__water--js');
 const key = new Date().toISOString().slice(0, 10);
 const status = localStorage.getItem(key);
 let counter;
@@ -28,20 +29,29 @@ if (addButton && removeButton && info) {
   if (!status) {
     info.textContent = 0;
     localStorage.setItem(key, '0');
+    water.classList.add('hydrapp__water--0')
   } else {
     counter = status;
     info.textContent = counter;
   }
   counter = status;
+  water.classList.add(`hydrapp__water--${counter}`);
+
   addButton.addEventListener('click', () => {
-    if (localStorage.getItem(key) !== "99") {
+    if (localStorage.getItem(key) !== "9") {
       localStorage.setItem(key, ++counter);
+      water.classList.remove(`hydrapp__water--${counter - 1}`);
+      water.classList.add(`hydrapp__water--${counter}`);
+      console.log(counter);
       info.textContent = counter;
     }
   });
   removeButton.addEventListener('click', () => {
     if (localStorage.getItem(key) !== "0") {
       localStorage.setItem(key, --counter);
+      water.classList.remove(`hydrapp__water--${counter + 1}`);
+      water.classList.add(`hydrapp__water--${counter}`);
+      console.log(counter);
       info.textContent = counter;
     };
   });

@@ -345,6 +345,100 @@ body {
     width: 280px;
     height: 280px;
     margin-bottom: 48px; }
+  .hydrapp__water {
+    display: none; }
+    .hydrapp__water--0 {
+      fill: #eceff1;
+      -webkit-clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
+              clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+      .hydrapp__water--0:hover {
+        fill: blue; }
+    .hydrapp__water--1 {
+      display: block;
+      -webkit-clip-path: polygon(6% 91%, 100% 91%, 90% 100%, 6% 100%);
+              clip-path: polygon(6% 91%, 100% 91%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--2 {
+      display: block;
+      -webkit-clip-path: polygon(6% 81%, 100% 81%, 90% 100%, 6% 100%);
+              clip-path: polygon(6% 81%, 100% 81%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--3 {
+      display: block;
+      -webkit-clip-path: polygon(6% 71%, 100% 71%, 90% 100%, 6% 100%);
+              clip-path: polygon(6% 71%, 100% 71%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--4 {
+      display: block;
+      -webkit-clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+              clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--5 {
+      display: block;
+      -webkit-clip-path: polygon(6% 51%, 100% 51%, 90% 100%, 6% 100%);
+              clip-path: polygon(6% 51%, 100% 51%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--6 {
+      display: block;
+      -webkit-clip-path: polygon(4% 41%, 100% 41%, 90% 100%, 6% 100%);
+              clip-path: polygon(4% 41%, 100% 41%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--7 {
+      display: block;
+      -webkit-clip-path: polygon(2% 31%, 100% 31%, 90% 100%, 6% 100%);
+              clip-path: polygon(2% 31%, 100% 31%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--8 {
+      display: block;
+      -webkit-clip-path: polygon(0% 21%, 100% 21%, 90% 100%, 6% 100%);
+              clip-path: polygon(0% 21%, 100% 21%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--9 {
+      display: block;
+      -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+              clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
   .hydrapp__cunter {
     position: absolute;
     display: -webkit-box;
