@@ -124,8 +124,20 @@ body {
     display: flex;
     justify-content: center;
     font-weight: 500;
-    margin-bottom: 37px;
+    margin-bottom: 30px;
     border: none;
+
+    &--audio {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      padding: 6px;
+      transition: background-color .3s ease;
+
+      &-on {
+        background-color: green;
+      }
+    }
 
     &--add {
       width: 216px;

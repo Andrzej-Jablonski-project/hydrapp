@@ -16,6 +16,7 @@ if ('serviceWorker' in navigator) {
 
 // place your code below
 
+const audioButton = document.querySelector('.hydrapp__button--audio-js');
 const addButton = document.querySelector('.hydrapp__button--add-js');
 const removeButton = document.querySelector('.hydrapp__button--remove-js');
 const info = document.querySelector('.hydrapp__cunter--js');
@@ -24,6 +25,28 @@ const water = document.querySelector('.hydrapp__water--js');
 const key = new Date().toISOString().slice(0, 10);
 const status = localStorage.getItem(key);
 let counter;
+
+if (audioButton) {
+  audioButton.addEventListener('click', () => {
+    audioButton.classList.toggle('hydrapp__button--audio-on');
+    if (audioButton.classList.contains('hydrapp__button--audio-on')) {
+      audioButton.textContent = 'audio on';
+    } else {
+      audioButton.textContent = 'audio off';
+    }
+  })
+}
+
+const waterAudio = () => {
+  const audio = new Audio('assets/sounds/water.wav');
+  audio.loop = false;
+  audio.play();
+}
+const drainAudio = () => {
+  const audio = new Audio('assets/sounds/drain.wav');
+  audio.loop = false;
+  audio.play();
+}
 
 if (addButton && removeButton && info) {
   if (!status) {
@@ -44,6 +67,9 @@ if (addButton && removeButton && info) {
       water.classList.add(`hydrapp__water--${counter}`);
       console.log(counter);
       info.textContent = counter;
+      if (audioButton.classList.contains('hydrapp__button--audio-on')) {
+        waterAudio();
+      }
     }
   });
   removeButton.addEventListener('click', () => {
@@ -53,6 +79,9 @@ if (addButton && removeButton && info) {
       water.classList.add(`hydrapp__water--${counter}`);
       console.log(counter);
       info.textContent = counter;
+      if (audioButton.classList.contains('hydrapp__button--audio-on')) {
+        drainAudio();
+      }
     };
   });
 }
