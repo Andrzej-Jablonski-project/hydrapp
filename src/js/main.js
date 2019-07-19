@@ -22,9 +22,8 @@ const removeButton = document.querySelector('.hydrapp__button--remove-js');
 const info = document.querySelector('.hydrapp__cunter--js');
 const table = document.querySelector('.history-table__data--js');
 const water = document.querySelector('.hydrapp__water--js');
-const key = new Date().toISOString().slice(0, 10);
-const status = localStorage.getItem(key);
-let counter;
+
+// functon audio button
 
 if (audioButton) {
   audioButton.addEventListener('click', () => {
@@ -37,18 +36,12 @@ if (audioButton) {
   })
 }
 
-const waterAudio = () => {
-  const audio = new Audio('assets/sounds/water.wav');
-  audio.loop = false;
-  audio.play();
-}
-const drainAudio = () => {
-  const audio = new Audio('assets/sounds/drain.wav');
-  audio.loop = false;
-  audio.play();
-}
-
 if (addButton && removeButton && info) {
+  const key = new Date().toISOString().slice(0, 10);
+  const status = localStorage.getItem(key);
+  let counter;
+  let thisClick;
+
   if (!status) {
     info.textContent = 0;
     localStorage.setItem(key, '0');
@@ -61,6 +54,7 @@ if (addButton && removeButton && info) {
   water.classList.add(`hydrapp__water--${counter}`);
 
   addButton.addEventListener('click', () => {
+    thisClick = true;
     if (localStorage.getItem(key) !== "9") {
       localStorage.setItem(key, ++counter);
       water.classList.remove(`hydrapp__water--${counter - 1}`);
@@ -68,11 +62,12 @@ if (addButton && removeButton && info) {
       console.log(counter);
       info.textContent = counter;
       if (audioButton.classList.contains('hydrapp__button--audio-on')) {
-        waterAudio();
+        audio();
       }
     }
   });
   removeButton.addEventListener('click', () => {
+    thisClick = false;
     if (localStorage.getItem(key) !== "0") {
       localStorage.setItem(key, --counter);
       water.classList.remove(`hydrapp__water--${counter + 1}`);
@@ -80,11 +75,31 @@ if (addButton && removeButton && info) {
       console.log(counter);
       info.textContent = counter;
       if (audioButton.classList.contains('hydrapp__button--audio-on')) {
-        drainAudio();
+        audio();
       }
     };
   });
+
+  // changes sound for button
+
+  const audio = () => {
+    const path = ['assets/sounds/water.wav', 'assets/sounds/drain.wav'];
+
+    if (thisClick) {
+      const audio = new Audio(path[0]);
+      audio.loop = false;
+      audio.play();
+      console.log('click ok');
+    } else {
+      const audio = new Audio(path[1]);
+      audio.loop = false;
+      audio.play();
+    }
+    console.log('ok');
+  }
 }
+
+// history table
 
 if (table) {
   for (let i = 0; i < localStorage.length; i++) {
