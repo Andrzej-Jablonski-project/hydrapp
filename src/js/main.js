@@ -23,6 +23,16 @@ const info = document.querySelector('.hydrapp__cunter--js');
 const table = document.querySelector('.history-table__data--js');
 const water = document.querySelector('.hydrapp__water--js');
 const clearHistory = document.querySelector('.history-table__clear--js');
+const key = currentDate();
+
+function currentDate() {
+  const today = new Date();
+  const dd = String(today.getDate()).padStart(2, '0');
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const yyyy = today.getFullYear();
+  const current = `${dd}/${mm}/${yyyy}`;
+  return current;
+}
 
 // functon audio button
 
@@ -38,11 +48,10 @@ if (audioButton) {
 }
 
 if (addButton && removeButton && info) {
-  const key = new Date().toISOString().slice(0, 10);
   const status = localStorage.getItem(key);
   let counter;
   let thisClick;
-
+  console.log(key);
   if (!status) {
     info.textContent = 0;
     localStorage.setItem(key, '0');
@@ -117,7 +126,7 @@ if (table) {
   clearHistory.addEventListener('click', () => {
     localStorage.clear();
     table.innerHTML = '';
-    localStorage.setItem(new Date().toISOString().slice(0, 10), '0');
-    table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${new Date().toISOString().slice(0, 10)}</th><th class="history-table__th">0</th></tr>`;
+    localStorage.setItem(key, '0');
+    table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">0</th></tr>`;
   })
 }
