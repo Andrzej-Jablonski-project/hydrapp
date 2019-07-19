@@ -91,5 +91,82 @@ body {
     background: none;
     border: none;
     text-decoration: none;
+    transition: color .3s ease;
+
+    &:hover {
+      color: black;
+    }
   }
+}
+
+.history {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  color: #F5E5E7;
+
+  &__header {
+    margin-top: 100px;
+    line-height: 40px;
+    font-weight: 500;
+  }
+
+  &__back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 184px;
+    height: 23px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #F5E5E7;
+    background: none;
+    border: none;
+    text-decoration: none;
+    transition: color .3s ease;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.history-table {
+  width: 300px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  border-spacing: 0;
+
+  &__head {
+    line-height: 21px;
+    background: black;
+  }
+
+  &__row {
+    &--js {
+      background: #a9aeb6;
+
+      &:nth-child(odd) {
+        background: #c4cad3;
+      }
+    }
+  }
+
+  &__th {
+    min-width: 150px;
+    height: 56px;
+    font-weight: 500;
+    color: #000000;
+
+    &--color {
+      color: #F5E5E7;
+    }
+  }
+
 }

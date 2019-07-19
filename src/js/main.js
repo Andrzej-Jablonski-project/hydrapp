@@ -19,6 +19,7 @@ if ('serviceWorker' in navigator) {
 const addButton = document.querySelector('.hydrapp__button--add-js');
 const removeButton = document.querySelector('.hydrapp__button--remove-js');
 const info = document.querySelector('.hydrapp__cunter--js');
+const table = document.querySelector('.history-table__data--js');
 const key = new Date().toISOString().slice(0, 10);
 const status = localStorage.getItem(key);
 let counter;
@@ -45,13 +46,13 @@ if (addButton && removeButton && info) {
     };
   });
 }
-const table = document.querySelector('.history-table__data--js');
+
 if (table) {
   for (let i = 0; i < localStorage.length; i++) {
     let key = localStorage.key(i);
     const value = localStorage.getItem(key);
     console.log(key);
     console.log(value);
-    table.innerHTML += `<tr class="table__tr"><th class="table__th">${key}</th><th class="table__th">${value}</th></tr>`;
+    table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">${value}</th></tr>`;
   }
 }
