@@ -345,6 +345,100 @@ body {
     width: 280px;
     height: 280px;
     margin-bottom: 48px; }
+  .hydrapp__water {
+    display: none; }
+    .hydrapp__water--0 {
+      fill: #eceff1;
+      -webkit-clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
+              clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+      .hydrapp__water--0:hover {
+        fill: blue; }
+    .hydrapp__water--1 {
+      display: block;
+      -webkit-clip-path: polygon(6% 91%, 100% 91%, 90% 100%, 6% 100%);
+              clip-path: polygon(6% 91%, 100% 91%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--2 {
+      display: block;
+      -webkit-clip-path: polygon(6% 81%, 100% 81%, 90% 100%, 6% 100%);
+              clip-path: polygon(6% 81%, 100% 81%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--3 {
+      display: block;
+      -webkit-clip-path: polygon(6% 71%, 100% 71%, 90% 100%, 6% 100%);
+              clip-path: polygon(6% 71%, 100% 71%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--4 {
+      display: block;
+      -webkit-clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+              clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--5 {
+      display: block;
+      -webkit-clip-path: polygon(6% 51%, 100% 51%, 90% 100%, 6% 100%);
+              clip-path: polygon(6% 51%, 100% 51%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--6 {
+      display: block;
+      -webkit-clip-path: polygon(4% 41%, 100% 41%, 90% 100%, 6% 100%);
+              clip-path: polygon(4% 41%, 100% 41%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--7 {
+      display: block;
+      -webkit-clip-path: polygon(2% 31%, 100% 31%, 90% 100%, 6% 100%);
+              clip-path: polygon(2% 31%, 100% 31%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--8 {
+      display: block;
+      -webkit-clip-path: polygon(0% 21%, 100% 21%, 90% 100%, 6% 100%);
+              clip-path: polygon(0% 21%, 100% 21%, 90% 100%, 6% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+    .hydrapp__water--9 {
+      display: block;
+      -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+              clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+      -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+      -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in;
+      transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
   .hydrapp__cunter {
     position: absolute;
     display: -webkit-box;
@@ -362,7 +456,7 @@ body {
     font-weight: 500;
     font-size: 112px;
     line-height: 131px; }
-  .hydrapp__button--add {
+  .hydrapp__button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -370,24 +464,34 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-    width: 216px;
-    height: 47px;
     margin-bottom: 37px;
-    background: #FFFFFF;
-    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
     border: none; }
-  .hydrapp__button--remove {
+    .hydrapp__button--add {
+      width: 216px;
+      height: 47px;
+      font-size: 18px;
+      line-height: 21px;
+      background: #FFFFFF;
+      -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 4px; }
+    .hydrapp__button--remove {
+      width: 184px;
+      height: 23px;
+      font-size: 14px;
+      line-height: 16px;
+      color: #F5E5E7;
+      background: none; }
+  .hydrapp__history {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 184px;
     height: 23px;
     font-weight: 500;
@@ -396,6 +500,78 @@ body {
     text-align: center;
     color: #F5E5E7;
     background: none;
-    border: none; }
+    border: none;
+    text-decoration: none;
+    -webkit-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    transition: color .3s ease; }
+    .hydrapp__history:hover {
+      color: black; }
+
+.history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  color: #F5E5E7; }
+  .history__header {
+    margin-top: 100px;
+    line-height: 40px;
+    font-weight: 500; }
+  .history__back {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 184px;
+    height: 23px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #F5E5E7;
+    background: none;
+    border: none;
+    text-decoration: none;
+    -webkit-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    transition: color .3s ease; }
+    .history__back:hover {
+      color: black; }
+
+.history-table {
+  width: 300px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  border-spacing: 0; }
+  .history-table__head {
+    line-height: 21px;
+    background: black; }
+  .history-table__row--js {
+    background: #a9aeb6; }
+    .history-table__row--js:nth-child(odd) {
+      background: #c4cad3; }
+  .history-table__th {
+    min-width: 150px;
+    height: 56px;
+    font-weight: 500;
+    color: #000000; }
+    .history-table__th--color {
+      color: #F5E5E7; }
 
 /*# sourceMappingURL=main.css.map */
