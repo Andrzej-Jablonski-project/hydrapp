@@ -22,6 +22,7 @@ const removeButton = document.querySelector('.hydrapp__button--remove-js');
 const info = document.querySelector('.hydrapp__cunter--js');
 const table = document.querySelector('.history-table__data--js');
 const water = document.querySelector('.hydrapp__water--js');
+const clearHistory = document.querySelector('.history-table__clear--js');
 
 // functon audio button
 
@@ -102,11 +103,21 @@ if (addButton && removeButton && info) {
 // history table
 
 if (table) {
-  for (let i = 0; i < localStorage.length; i++) {
-    let key = localStorage.key(i);
-    const value = localStorage.getItem(key);
-    console.log(key);
-    console.log(value);
-    table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">${value}</th></tr>`;
-  }
+  const dataTable = () => {
+    for (let i = 0; i < localStorage.length; i++) {
+      let key = localStorage.key(i);
+      const value = localStorage.getItem(key);
+      console.log(key);
+      console.log(value);
+      table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">${value}</th></tr>`;
+    }
+  };
+  dataTable();
+
+  clearHistory.addEventListener('click', () => {
+    localStorage.clear();
+    table.innerHTML = '';
+    localStorage.setItem(new Date().toISOString().slice(0, 10), '0');
+    table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${new Date().toISOString().slice(0, 10)}</th><th class="history-table__th">0</th></tr>`;
+  })
 }
