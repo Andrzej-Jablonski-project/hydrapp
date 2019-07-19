@@ -36,8 +36,10 @@ body {
 
   &__water {
     display: none;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
 
     &--0 {
+      display: block;
       fill: #eceff1;
       clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
       transition: fill 1s ease-in, clip-path 1s ease-in;
