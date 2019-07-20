@@ -1,8 +1,8 @@
 {
   "name": "Hydro",
   "short_name": "Hydro",
-  "theme_color": "#000000",
-  "background_color": "#000000",
+  "theme_color": "#3767AD",
+  "background_color": "#3767AD",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/hydrapp/",
