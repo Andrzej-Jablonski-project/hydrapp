@@ -1,7 +1,7 @@
 # hydrapp
 ![screenshot project](assets/img/cover.jpg)
 ## Opis projektu
-Bardzo prosta aplikacja PWA monitorująca nawodnienie organizmu. Przydatna zwłaszcza latem gdzie szybko można się odwodnić :smile:. Dzięki notowaniu ilości wypitych szklanek wody dziennie w aplikacji twój organizm cię pokocha :heart:
+Bardzo prosta aplikacja PWA monitorująca nawodnienie organizmu. Przydatna zwłaszcza latem gdzie szybko można się odwodnić :sweat: Dzięki notowaniu ilości wypitych szklanek wody dziennie w aplikacji twój organizm cię pokocha :heart:
 ## Technologie
 - HTML5
 - CSS
@@ -11,6 +11,7 @@ Bardzo prosta aplikacja PWA monitorująca nawodnienie organizmu. Przydatna zwła
 - SASS (składnia SCSS)
 ## Automatyzacja
 [WTF gulp starter kit](https://github.com/maciejkorsan/wtf-gulp-starter)
+
 `git clone https://github.com/maciejkorsan/wtf-gulp-starter`
 ### WTF gulp starter kit
 - live server
