@@ -28,7 +28,11 @@
 
 <body>
   <main class="hydrapp">
-    <button class="hydrapp__button hydrapp__button--audio hydrapp__button--audio-js">audio off</button>
+    <div class="audio">
+      <h2 class="audio__header">Sound switch</h2>
+      <input class="audio__button audio__button--none audio__button--light" id="audio" type="checkbox" />
+      <label class="audio__toggle audio__toggle--js" for="audio"></label>
+    </div>
     <div class="hydrapp__glass">
       <p class="hydrapp__cunter hydrapp__cunter--js"></p>
       <div><svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">

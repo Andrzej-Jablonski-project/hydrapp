@@ -16,7 +16,7 @@ if ('serviceWorker' in navigator) {
 
 // place your code below
 
-const audioButton = document.querySelector('.hydrapp__button--audio-js');
+const audioButton = document.querySelector('.audio__toggle--js');
 const addButton = document.querySelector('.hydrapp__button--add-js');
 const removeButton = document.querySelector('.hydrapp__button--remove-js');
 const info = document.querySelector('.hydrapp__cunter--js');
@@ -38,12 +38,7 @@ function currentDate() {
 
 if (audioButton) {
   audioButton.addEventListener('click', () => {
-    audioButton.classList.toggle('hydrapp__button--audio-on');
-    if (audioButton.classList.contains('hydrapp__button--audio-on')) {
-      audioButton.textContent = 'audio on';
-    } else {
-      audioButton.textContent = 'audio off';
-    }
+    audioButton.classList.toggle('audio__toggle--on');
   })
 }
 
@@ -51,7 +46,7 @@ if (addButton && removeButton && info) {
   const status = localStorage.getItem(key);
   let counter;
   let thisClick;
-  console.log(key);
+
   if (!status) {
     info.textContent = 0;
     localStorage.setItem(key, '0');
@@ -69,9 +64,8 @@ if (addButton && removeButton && info) {
       localStorage.setItem(key, ++counter);
       water.classList.remove(`hydrapp__water--${counter - 1}`);
       water.classList.add(`hydrapp__water--${counter}`);
-      console.log(counter);
       info.textContent = counter;
-      if (audioButton.classList.contains('hydrapp__button--audio-on')) {
+      if (audioButton.classList.contains('audio__toggle--on')) {
         audio();
       }
     }
@@ -82,9 +76,8 @@ if (addButton && removeButton && info) {
       localStorage.setItem(key, --counter);
       water.classList.remove(`hydrapp__water--${counter + 1}`);
       water.classList.add(`hydrapp__water--${counter}`);
-      console.log(counter);
       info.textContent = counter;
-      if (audioButton.classList.contains('hydrapp__button--audio-on')) {
+      if (audioButton.classList.contains('audio__toggle--on')) {
         audio();
       }
     };
@@ -99,13 +92,11 @@ if (addButton && removeButton && info) {
       const audio = new Audio(path[0]);
       audio.loop = false;
       audio.play();
-      console.log('click ok');
     } else {
       const audio = new Audio(path[1]);
       audio.loop = false;
       audio.play();
     }
-    console.log('ok');
   }
 }
 
@@ -116,8 +107,6 @@ if (table) {
     for (let i = 0; i < localStorage.length; i++) {
       let key = localStorage.key(i);
       const value = localStorage.getItem(key);
-      console.log(key);
-      console.log(value);
       table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">${value}</th></tr>`;
     }
   };
