@@ -1,8 +1,8 @@
 {
-  "name": "Hydro",
-  "short_name": "Hydro",
-  "theme_color": "#3767AD",
-  "background_color": "#3767AD",
+  "name": "WTF: PWA",
+  "short_name": "WTF: PWA",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/hydrapp/",
