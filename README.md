@@ -1,5 +1,5 @@
 # hydrapp
-![screenshot project](assets/img/cover.jpg)
+![screenshot project](src/assets/img/cover.jpg)
 ## Opis projektu
 Bardzo prosta aplikacja PWA monitorująca nawodnienie organizmu. Przydatna zwłaszcza latem gdzie szybko można się odwodnić :sweat: Dzięki notowaniu ilości wypitych szklanek wody dziennie w aplikacji twój organizm cię pokocha :heart:
 ## Technologie
