@@ -17,6 +17,7 @@ if ('serviceWorker' in navigator) {
 // place your code below
 
 const audioButton = document.querySelector('.audio__toggle--js');
+const audioInput = document.querySelector('.audio__button--js');
 const addButton = document.querySelector('.hydrapp__button--add-js');
 const removeButton = document.querySelector('.hydrapp__button--remove-js');
 const info = document.querySelector('.hydrapp__cunter--js');
@@ -37,8 +38,22 @@ function currentDate() {
 // functon audio button
 
 if (audioButton) {
+  if (!localStorage.getItem('toggleAudio')) {
+    localStorage.setItem('toggleAudio', '0');
+  }
+  if (localStorage.getItem('toggleAudio') === '0') {
+    audioInput.checked = false;
+  } else {
+    audioInput.checked = true;
+  }
   audioButton.addEventListener('click', () => {
-    audioButton.classList.toggle('audio__toggle--on');
+    if (localStorage.getItem('toggleAudio') === '0') {
+      localStorage.setItem('toggleAudio', '1');
+      audioInput.checked = false;
+    } else {
+      localStorage.setItem('toggleAudio', '0');
+      audioInput.checked = true;
+    }
   })
 }
 
@@ -65,7 +80,7 @@ if (addButton && removeButton && info) {
       water.classList.remove(`hydrapp__water--${counter - 1}`);
       water.classList.add(`hydrapp__water--${counter}`);
       info.textContent = counter;
-      if (audioButton.classList.contains('audio__toggle--on')) {
+      if (localStorage.getItem('toggleAudio') === '1') {
         audio();
       }
     }
@@ -77,7 +92,7 @@ if (addButton && removeButton && info) {
       water.classList.remove(`hydrapp__water--${counter + 1}`);
       water.classList.add(`hydrapp__water--${counter}`);
       info.textContent = counter;
-      if (audioButton.classList.contains('audio__toggle--on')) {
+      if (localStorage.getItem('toggleAudio') === '1') {
         audio();
       }
     };
@@ -104,7 +119,7 @@ if (addButton && removeButton && info) {
 
 if (table) {
   const dataTable = () => {
-    for (let i = 0; i < localStorage.length; i++) {
+    for (let i = 0; i < localStorage.length - 1; i++) {
       let key = localStorage.key(i);
       const value = localStorage.getItem(key);
       table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">${value}</th></tr>`;
