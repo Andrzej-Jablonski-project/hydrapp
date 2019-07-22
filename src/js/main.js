@@ -85,6 +85,7 @@ if (addButton && removeButton && info) {
       }
     }
   });
+
   removeButton.addEventListener('click', () => {
     thisClick = false;
     if (localStorage.getItem(key) !== "0") {
@@ -95,7 +96,7 @@ if (addButton && removeButton && info) {
       if (localStorage.getItem('toggleAudio') === '1') {
         audio();
       }
-    };
+    }
   });
 
   // changes sound for button
@@ -124,13 +125,20 @@ if (table) {
       const value = localStorage.getItem(key);
       table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">${value}</th></tr>`;
     }
-  };
+  }
   dataTable();
 
-  clearHistory.addEventListener('click', () => {
+  const clear = () => {
     localStorage.clear();
-    table.innerHTML = '';
     localStorage.setItem(key, '0');
-    table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">0</th></tr>`;
-  })
+    table.innerHTML = `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">0</th></tr>`;
+  }
+  clearHistory.addEventListener('click', () => {
+    if (localStorage.getItem('toggleAudio') === "0") {
+      clear();
+    } else {
+      clear();
+      localStorage.setItem('toggleAudio', '1');
+    }
+  });
 }
