@@ -1,0 +1,87 @@
+// audio button
+.audio {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+
+    &__header {
+        margin-right: 0 10px 0 0;
+        padding: 8px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #F5E5E7
+    }
+}
+
+.audio__button--none {
+    display: none;
+
+    // add default box-sizing for this scope
+    &,
+    &:after,
+    &:before,
+    & *,
+    & *:after,
+    & *:before,
+    &+.audio__toggle {
+        box-sizing: border-box;
+
+        &::selection {
+            background: none;
+        }
+    }
+
+    +.audio__toggle {
+        outline: 0;
+        display: block;
+        width: 3em;
+        height: 1.5em;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+
+        &:after,
+        &:before {
+            position: relative;
+            display: block;
+            content: "";
+            width: 50%;
+            height: 100%;
+        }
+
+        &:after {
+            left: 0;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+
+    &:checked+.audio__toggle:after {
+        left: 50%;
+    }
+}
+
+// themes
+.audio__button--light {
+    +.audio__toggle {
+        background: #e0e0e0;
+        border-radius: 2em;
+        padding: 2px;
+        transition: all .4s ease;
+
+        &:after {
+            border-radius: 50%;
+            background: #fff;
+            transition: all .2s ease;
+        }
+    }
+
+    &:checked+.audio__toggle {
+        background: #4FC261;
+    }
+}
