@@ -120,10 +120,10 @@ if (addButton && removeButton && info) {
 
 if (table) {
   const dataTable = () => {
-    for (let i = 0; i < localStorage.length - 1; i++) {
+    for (let i = 0; i < localStorage.length; i++) {
       let key = localStorage.key(i);
       const value = localStorage.getItem(key);
-      table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">${value}</th></tr>`;
+      key !== 'toggleAudio' ? table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">${value}</th></tr>` : '';
     }
   }
   dataTable();
