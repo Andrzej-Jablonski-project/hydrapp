@@ -119,14 +119,12 @@ if (addButton && removeButton && info) {
 // history table
 
 if (table) {
-  const dataTable = () => {
-    for (let i = 0; i < localStorage.length; i++) {
-      let key = localStorage.key(i);
-      const value = localStorage.getItem(key);
-      key !== 'toggleAudio' ? table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">${value}</th></tr>` : '';
-    }
+  const data = {
+    ...localStorage
   }
-  dataTable();
+  for (let key in data) {
+    key !== 'toggleAudio' ? table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">${data[key]}</th></tr>` : '';
+  }
 
   const clear = () => {
     localStorage.clear();
