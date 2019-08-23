@@ -84,18 +84,18 @@ if (addButton && removeButton && info) {
   addButton.addEventListener('click', () => {
     if (localStorage.getItem(date) !== "9") {
       waterCount(++counter, counter - 1);
-    }
-    if (localStorage.getItem('toggleAudio') === '1') {
-      audio('assets/sounds/water.wav');
+      if (localStorage.getItem('toggleAudio') === '1') {
+        audio('assets/sounds/water.wav');
+      }
     }
   });
 
   removeButton.addEventListener('click', () => {
     if (localStorage.getItem(date) !== "0") {
       waterCount(--counter, counter + 1);
-    }
-    if (localStorage.getItem('toggleAudio') === '1') {
-      audio('assets/sounds/drain.wav');
+      if (localStorage.getItem('toggleAudio') === '1') {
+        audio('assets/sounds/drain.wav');
+      }
     }
   });
 
