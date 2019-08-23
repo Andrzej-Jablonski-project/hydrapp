@@ -24,16 +24,15 @@ const info = document.querySelector('.hydrapp__cunter--js');
 const table = document.querySelector('.history-table__data--js');
 const water = document.querySelector('.hydrapp__water--js');
 const clearHistory = document.querySelector('.history-table__clear--js');
-const key = currentDate();
 
-function currentDate() {
-  const today = new Date();
-  const dd = String(today.getDate()).padStart(2, '0');
-  const mm = String(today.getMonth() + 1).padStart(2, '0');
-  const yyyy = today.getFullYear();
-  const current = `${dd}/${mm}/${yyyy}`;
-  return current;
+// date
+
+const dateFormat = {
+  day: String(new Date().getDate()).padStart(2, '0'),
+  month: String(new Date().getMonth() + 1).padStart(2, '0'),
+  year: new Date().getFullYear(),
 }
+const date = dateFormat.year + dateFormat.month + dateFormat.day;
 
 // functon audio button
 
@@ -41,11 +40,13 @@ if (audioButton) {
   if (!localStorage.getItem('toggleAudio')) {
     localStorage.setItem('toggleAudio', '0');
   }
+
   if (localStorage.getItem('toggleAudio') === '0') {
     audioInput.checked = false;
   } else {
     audioInput.checked = true;
   }
+
   audioButton.addEventListener('click', () => {
     if (localStorage.getItem('toggleAudio') === '0') {
       localStorage.setItem('toggleAudio', '1');
@@ -58,13 +59,12 @@ if (audioButton) {
 }
 
 if (addButton && removeButton && info) {
-  const status = localStorage.getItem(key);
+  const status = localStorage.getItem(date);
   let counter;
-  let thisClick;
 
   if (!status) {
     info.textContent = 0;
-    localStorage.setItem(key, '0');
+    localStorage.setItem(date, '0');
     water.classList.add('hydrapp__water--0')
   } else {
     counter = status;
@@ -73,64 +73,68 @@ if (addButton && removeButton && info) {
   counter = status;
   water.classList.add(`hydrapp__water--${counter}`);
 
+
+  const waterCount = (memoryState, displayWater) => {
+    localStorage.setItem(date, memoryState);
+    water.classList.remove(`hydrapp__water--${displayWater}`);
+    water.classList.add(`hydrapp__water--${counter}`);
+    info.textContent = counter;
+  }
+
   addButton.addEventListener('click', () => {
-    thisClick = true;
-    if (localStorage.getItem(key) !== "9") {
-      localStorage.setItem(key, ++counter);
-      water.classList.remove(`hydrapp__water--${counter - 1}`);
-      water.classList.add(`hydrapp__water--${counter}`);
-      info.textContent = counter;
-      if (localStorage.getItem('toggleAudio') === '1') {
-        audio();
-      }
+    if (localStorage.getItem(date) !== "9") {
+      waterCount(++counter, counter - 1);
+    }
+    if (localStorage.getItem('toggleAudio') === '1') {
+      audio('assets/sounds/water.wav');
     }
   });
 
   removeButton.addEventListener('click', () => {
-    thisClick = false;
-    if (localStorage.getItem(key) !== "0") {
-      localStorage.setItem(key, --counter);
-      water.classList.remove(`hydrapp__water--${counter + 1}`);
-      water.classList.add(`hydrapp__water--${counter}`);
-      info.textContent = counter;
-      if (localStorage.getItem('toggleAudio') === '1') {
-        audio();
-      }
+    if (localStorage.getItem(date) !== "0") {
+      waterCount(--counter, counter + 1);
+    }
+    if (localStorage.getItem('toggleAudio') === '1') {
+      audio('assets/sounds/drain.wav');
     }
   });
 
-  // changes sound for button
+  // sounds
 
-  const audio = () => {
-    const path = ['assets/sounds/water.wav', 'assets/sounds/drain.wav'];
-
-    if (thisClick) {
-      const audio = new Audio(path[0]);
-      audio.loop = false;
-      audio.play();
-    } else {
-      const audio = new Audio(path[1]);
-      audio.loop = false;
-      audio.play();
-    }
+  const audio = (source) => {
+    const audio = new Audio(source);
+    audio.loop = false;
+    audio.play();
   }
 }
 
 // history table
 
 if (table) {
+  const convertDate = function (date) {
+    const day = date.slice(6, 8);
+    const month = date.slice(4, 6);
+    const year = date.slice(0, 4);
+    const newDate = `${day}/${month}/${year}`;
+    return newDate;
+  }
+
   const data = {
     ...localStorage
   }
-  for (let key in data) {
-    key !== 'toggleAudio' ? table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">${data[key]}</th></tr>` : '';
+
+  for (let date in data) {
+    const newDate = convertDate(date);
+    date !== 'toggleAudio' ? table.innerHTML += `<tr class="history-table__row--js"><th class="history-table__th">${newDate}</th><th class="history-table__th">${data[date]}</th></tr>` : '';
   }
 
   const clear = () => {
+    const newDate = convertDate(date);
     localStorage.clear();
-    localStorage.setItem(key, '0');
-    table.innerHTML = `<tr class="history-table__row--js"><th class="history-table__th">${key}</th><th class="history-table__th">0</th></tr>`;
+    localStorage.setItem(date, '0');
+    table.innerHTML = `<tr class="history-table__row--js"><th class="history-table__th">${newDate}</th><th class="history-table__th">0</th></tr>`;
   }
+
   clearHistory.addEventListener('click', () => {
     if (localStorage.getItem('toggleAudio') === "0") {
       clear();
